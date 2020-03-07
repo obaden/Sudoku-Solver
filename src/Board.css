@@ -1,50 +1,44 @@
 .Board {
-  margin: 40px;
   float: left;
-  border: 2px solid black;
+  border: 2px solid white;
 }
 
 .square:nth-child(3),
 .square:nth-child(6) {
-  border-right: 2px solid black;
+  border-right: 2px solid whitesmoke;
 }
 
 .row:nth-child(3),
 .row:nth-child(6) {
-  border-bottom: 2px solid black;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  margin: 0;
+  border-bottom: 2px solid whitesmoke;
 }
 
 .square {
+  border: 1px solid grey;
   width: 50px;
   height: 50px;
   line-height: 50px;
   text-align: center;
   font-size: 1.5em;
-  border: 0px;
+  /* border: 0px; */
 }
 
 .active {
-  background-color: white;
+  background-color: #202020;
+  color: white;
 }
 
 .active:focus {
-  background-color: aquamarine;
+  background-color: #5cdb95;
+  /* opacity: 0.8; */
   outline: none;
 }
 
 .inactive {
-  background-color: #0000001c;
-  color: #00000085;
+  background-color: #383838;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .wrong {
-  background-color: red;
+  background-color: #c7493a;
 }

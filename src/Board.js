@@ -64,7 +64,9 @@ function Square(props) {
       type="text"
       maxLength="1"
       onChange={handleInput}
-      className={props.active ? props.class + " active" : props.class}></input>
+      className={
+        props.active ? props.class + " active" : props.class + " inactive"
+      }></input>
   );
 }
 

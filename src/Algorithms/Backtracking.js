@@ -1,7 +1,7 @@
 import Solver from "./Solver";
 
 class Backtracking extends Solver {
-  async solve() {
+  async solve(speed) {
     let positionsToChange = [];
     for (let row = 0; row < 9; row++) {
       for (let column = 0; column < 9; column++) {
@@ -25,7 +25,9 @@ class Backtracking extends Solver {
           position++;
         }
       }
-      await this.sleep(5);
+      if (speed > 0) {
+        await this.sleep(speed);
+      }
     }
     // await this.sleep(5);
     // this.solveToggle();

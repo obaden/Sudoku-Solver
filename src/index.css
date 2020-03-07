@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #202020;
 }
 
 code {
@@ -12,14 +13,67 @@ code {
     monospace;
 }
 
-button {
+button,
+select {
   /* display: block; */
-  width: 150px;
+  width: 100px;
   font-size: 1em;
+  height: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+button {
+  border: 0;
+  outline: none;
+}
+
+h1 {
+  margin: 0;
+  color: white;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.selected {
+  background-color: #689775;
+}
+
+h2 {
+  margin: 0;
+  margin-top: 50px;
+  margin-right: 30px;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.Buttons {
+  display: inline-block;
+}
+
+.Buttons {
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+.Sudoku {
+  margin: 40px;
+}
+
+#solve {
+  display: block;
+  margin: 0;
+  margin-top: 20px;
+  width: 150px;
   height: 40px;
 }
 
-.Buttons,
-.difficulty {
-  display: inline-block;
+#clear {
+  position: relative;
+  bottom: 0;
+  margin: 0;
+  margin-top: 100px;
+  display: block;
 }

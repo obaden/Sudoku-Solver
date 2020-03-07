@@ -43,6 +43,7 @@ class SudokuController extends React.Component {
     super(props);
     //initialises the current board to be a copy of the default board
     this.state = {
+      solveSpeed: 50,
       solving: false,
       stopping: false,
       solved: false,
@@ -99,7 +100,7 @@ class SudokuController extends React.Component {
           this.updateBoard,
           this.setSolved
         );
-        solver.solve();
+        solver.solve(this.state.solveSpeed);
       }
     );
   };
@@ -157,13 +158,14 @@ class SudokuController extends React.Component {
   clear = () => {
     this.setState({
       stopping: this.state.solving,
+      solving: false,
       currentBoard: this.copyBoard(defaultBoards[this.state.boardID])
     });
   };
 
   render() {
     return (
-      <div>
+      <div className="Sudoku">
         <Board
           solving={this.state.solving}
           solvedBoard={this.state.SolvedBoard}
@@ -172,27 +174,47 @@ class SudokuController extends React.Component {
           default={defaultBoards[this.state.boardID]}></Board>
         <div className="Buttons">
           <div className="difficulty">
+            <h1>Board Select</h1>
             <button
-              disabled={this.state.solving}
+              className={this.state.boardID == 0 ? "selected" : ""}
+              disabled={this.state.solving || this.state.boardID == 0}
               onClick={() => this.changeBoard(0)}>
               Easy
             </button>
             <button
-              disabled={this.state.solving}
+              className={this.state.boardID == 1 ? "selected" : ""}
+              disabled={this.state.solving || this.state.boardID == 1}
               onClick={() => this.changeBoard(1)}>
               Medium
             </button>
             <button
-              disabled={this.state.solving}
+              className={this.state.boardID == 2 ? "selected" : ""}
+              disabled={this.state.solving || this.state.boardID == 2}
               onClick={() => this.changeBoard(2)}>
               Hard
             </button>
           </div>
           <div className="Control">
-            <button onClick={this.state.solving ? this.unsolve : this.solve}>
+            <h2>Solve speed</h2>
+            <select
+              id="speed"
+              disabled={this.state.solving}
+              onChange={e => {
+                this.setState({ solveSpeed: Number(e.target.value) });
+              }}>
+              <option value="50">Slow</option>
+              <option value="10">Medium</option>
+              <option value="1">Fast</option>
+              <option value="0">Instant</option>
+            </select>
+            <button
+              id="solve"
+              onClick={this.state.solving ? this.unsolve : this.solve}>
               {this.state.solving ? "Return To Board" : "Solve"}
             </button>
-            <button onClick={this.clear}>Clear Board</button>
+            <button id="clear" onClick={this.clear}>
+              Clear Board
+            </button>
           </div>
         </div>
       </div>
