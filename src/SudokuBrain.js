@@ -176,20 +176,20 @@ class SudokuController extends React.Component {
           <div className="difficulty">
             <h1>Board Select</h1>
             <button
-              className={this.state.boardID == 0 ? "selected" : ""}
-              disabled={this.state.solving || this.state.boardID == 0}
+              className={this.state.boardID === 0 ? "selected" : ""}
+              disabled={this.state.solving || this.state.boardID === 0}
               onClick={() => this.changeBoard(0)}>
               Easy
             </button>
             <button
-              className={this.state.boardID == 1 ? "selected" : ""}
-              disabled={this.state.solving || this.state.boardID == 1}
+              className={this.state.boardID === 1 ? "selected" : ""}
+              disabled={this.state.solving || this.state.boardID === 1}
               onClick={() => this.changeBoard(1)}>
               Medium
             </button>
             <button
-              className={this.state.boardID == 2 ? "selected" : ""}
-              disabled={this.state.solving || this.state.boardID == 2}
+              className={this.state.boardID === 2 ? "selected" : ""}
+              disabled={this.state.solving || this.state.boardID === 2}
               onClick={() => this.changeBoard(2)}>
               Hard
             </button>

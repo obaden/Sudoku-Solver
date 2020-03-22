@@ -54,7 +54,7 @@ function Square(props) {
     if (keycode < 49 || keycode > 57) {
       e.target.value = "";
     } else {
-      props.update(e.target.value);
+      props.update(Number(e.target.value));
     }
   }
   return (
