@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Sudoku-Solver/static/css/main.423f87af.chunk.css",
+    "main.js": "/Sudoku-Solver/static/js/main.50a6b189.chunk.js",
+    "main.js.map": "/Sudoku-Solver/static/js/main.50a6b189.chunk.js.map",
+    "runtime-main.js": "/Sudoku-Solver/static/js/runtime-main.51cb6dc7.js",
+    "runtime-main.js.map": "/Sudoku-Solver/static/js/runtime-main.51cb6dc7.js.map",
+    "static/js/2.a2e91b9c.chunk.js": "/Sudoku-Solver/static/js/2.a2e91b9c.chunk.js",
+    "static/js/2.a2e91b9c.chunk.js.map": "/Sudoku-Solver/static/js/2.a2e91b9c.chunk.js.map",
+    "index.html": "/Sudoku-Solver/index.html",
+    "precache-manifest.de8aacb38421c18f05d3be673c30d579.js": "/Sudoku-Solver/precache-manifest.de8aacb38421c18f05d3be673c30d579.js",
+    "service-worker.js": "/Sudoku-Solver/service-worker.js",
+    "static/css/main.423f87af.chunk.css.map": "/Sudoku-Solver/static/css/main.423f87af.chunk.css.map",
+    "static/js/2.a2e91b9c.chunk.js.LICENSE.txt": "/Sudoku-Solver/static/js/2.a2e91b9c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.51cb6dc7.js",
+    "static/js/2.a2e91b9c.chunk.js",
+    "static/css/main.423f87af.chunk.css",
+    "static/js/main.50a6b189.chunk.js"
+  ]
+}
