@@ -1,4 +1,4 @@
-## Tomoku puzzle solver
+## Sodoku puzzle solver
 
 You can try it out here
 [Sodoku Solver](https://obaden.github.io/Sudoku-Solver)
